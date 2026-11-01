@@ -221,6 +221,7 @@
   /* Profile Picture container & frame styles */
   .hero-image-wrap {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -228,9 +229,9 @@
 
   .profile-pic {
     width: min(280px, 100%);
-    aspect-ratio: 1 / 1.15; /* Sized to gracefully host a portrait pose */
+    aspect-ratio: 1 / 1.15;
     object-fit: cover;
-    border-radius: 40% 40% 40% 40% / 35% 35% 45% 45%; /* Distinct artistic squircle */
+    border-radius: 40% 40% 40% 40% / 35% 35% 45% 45%;
     border: 3px solid var(--line);
     background: var(--bg-soft);
     box-shadow: 0 16px 32px rgba(0,0,0,0.06);
@@ -240,6 +241,16 @@
   .profile-pic:hover {
     transform: scale(1.02) translateY(-4px);
     border-color: var(--moss);
+  }
+
+  .profile-caption {
+    margin-top: 14px;
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    text-align: center;
   }
 
   .btn {
@@ -515,11 +526,11 @@
     }
 
     .hero-image-wrap {
-      order: -1; /* move image to the top on screens like tablets */
+      order: -1;
     }
 
     .profile-pic {
-      width: 190px; /* appropriately scale it for single-col */
+      width: 190px;
     }
 
     .hero h1 {
@@ -575,7 +586,7 @@
     }
 
     .profile-pic {
-      width: 150px; /* compact size for mobile viewport */
+      width: 150px;
     }
 
     .hero h1 {
@@ -690,8 +701,8 @@
         </div>
       </div>
       <div class="hero-image-wrap reveal d3">
-        <!-- Replaced visual source path with local filename. Put your photo inside the folder as image_0.png -->
         <img class="profile-pic" src="image_0.png" alt="Muhammad Rehan Portrait">
+        <span class="profile-caption">Muhammad Rehan Khan Sahu</span>
       </div>
     </div>
   </section>
